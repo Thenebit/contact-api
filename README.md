@@ -11,18 +11,15 @@ Practice project — Dockerized FastAPI + SQLModel + PostgreSQL CRUD.
 ## Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/contact-api.git
+git clone https://github.com/Thenebit/contact-api.git
 cd contact-api
 ```
 
 Create `.env`:
 
 ```
-POSTGRES_USER=contact
-POSTGRES_PASSWORD=contact_dev_pw
-POSTGRES_DB=contact_db
-DB_HOST=db
-DB_PORT=5432
+cp .env.example .env
+# Edit .ev with your credentials
 ```
 
 Run:
