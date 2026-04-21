@@ -22,6 +22,11 @@ cp .env.example .env
 # Edit .ev with your credentials
 ```
 
+```bash
+# Install docker in you don't have
+sudo apt install -y docker.io docker-compose-v2
+```
+
 Run:
 
 ```bash
