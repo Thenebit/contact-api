@@ -1,0 +1,24 @@
+from datetime import datetime, timezone
+from typing import Optional
+from sqlmodel import SQLModel, Field
+
+# Shared field
+class ContactMessageBase(SQLModel):
+	name: str
+	email: str
+	subject: str
+	message: str
+
+# From client
+class ContactMessageCreate(ContactMessageBase):
+	pass
+
+# To client
+class ContactMessageRead(ContactMessageBase):
+	id: int
+	created_at: datetime
+
+# DB Table
+class ContactMessage(ContactMessageBase, table=True):
+	id: Optional[int] = Field(default=None, primary_key=True)
+	created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
